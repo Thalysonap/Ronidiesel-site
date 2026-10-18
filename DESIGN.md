@@ -96,14 +96,14 @@ components:
 
 A interface é uma baia técnica organizada para devolver movimento. Marinho estrutural, azul de ação, azul-claro e superfícies branco/mineral formam uma linguagem precisa; vigas, trilhos, divisores compartilhados e fotografia operacional tornam o cuidado visível sem recorrer a emblemas ou nostalgia de oficina.
 
-O azul não é acabamento: ele organiza campos inteiros, ações e estados. A confiança nasce de hierarquia, contraste e clareza. Títulos são largos e decisivos, as superfícies se encontram sem folgas decorativas e as fotografias permanecem monocromáticas até a interação.
+O azul não é acabamento: ele organiza campos inteiros, ações e estados. A confiança nasce de hierarquia, contraste e clareza. Títulos são largos e decisivos, as superfícies se encontram sem folgas decorativas e as fotografias preservam cor natural com contraste controlado.
 
 **Key Characteristics:**
 
 - Contraste alto entre marinho estrutural, azul de ação e superfícies brancas/minerais.
 - Tipografia Geist larga e compacta, com títulos limitados a duas ou três linhas.
 - Geometria ortogonal inspirada em baias, vigas, placas e linhas de inspeção.
-- Fotografia em escala de cinza que recupera cor apenas em hover ou foco.
+- Fotografia colorida com saturação natural, revelação por enquadramento e ganho discreto de profundidade na interação.
 - Movimento funcional com scrub, empilhamento e progressão; estado estático completo para movimento reduzido.
 
 ## Colors
@@ -174,23 +174,23 @@ Viga marinho translúcida com blur funcional de 14px. Links em branco/azul suave
 
 ### Brand Slot
 
-O cabeçalho e o rodapé reservam um bloco quadrado de 44px para a marca. Enquanto a logomarca oficial não existe, o monograma `RD` ocupa esse espaço; a troca por imagem mantém a mesma caixa e não altera o wordmark.
+O cabeçalho e o rodapé usam a logomarca oficial RONIDIESEL recortada em fundo transparente, integrada diretamente às superfícies marinho. A versão web otimizada preserva a arte e mantém leitura clara sem duplicar o wordmark em texto ou criar uma placa retangular ao redor da marca.
 
 ### Inspection Media
 
-Imagens começam em escala de cinza e contraste elevado. Hover e foco recuperam cor e aplicam escala de até 1.05. A mídia vive em retângulos completos, sem máscaras orgânicas simuladas.
+Imagens começam coloridas, com saturação levemente contida e contraste controlado. A entrada revela o enquadramento por `clip-path`; hover e foco elevam a saturação e aplicam escala de até 1.025. A mídia vive em retângulos completos, sem máscaras orgânicas simuladas.
 
 ### Location Media
 
-O vídeo do mecânico é enquadrado como painel técnico ao lado do mapa, com varredura azul discreta. Ele permanece sem áudio, reproduz somente quando está visível e o visitante não pediu movimento reduzido, pausa fora da tela e preserva um poster estático como fallback.
+Endereço, telefone, ação de contato e mapa formam um conjunto direto e contínuo. A localização não recebe vídeo ou animação decorativa: a rota permanece como conteúdo principal.
 
 ### WhatsApp Action
 
 O atalho persistente usa um botão quadrado azul de 52px, com ícone branco, foco visível e rótulo acessível. A cor não cria um novo verde de marca: o canal é comunicado pelo ícone e pelo texto contextual.
 
-### Process Panels
+### Process Routes
 
-Etapas reais podem usar numeração. Painéis sticky compartilham linha estrutural e recebem a única sombra do sistema durante o empilhamento. GSAP e ScrollTrigger são inicializados apenas dentro de `gsap.matchMedia()` para `(prefers-reduced-motion: no-preference)`; os paradigmas principais são card stacking e revelação de palavras por scrub. CSS garante conteúdo visível por padrão. Em `reduce`, pinning, scrub, transforms e auto-scroll são removidos e todo conteúdo fica no estado final.
+Etapas reais podem usar numeração. A sequência principal forma uma trilha contínua, com divisores compartilhados, coluna numérica e mudança de superfície no passo final; não usa cartões soltos, imagens genéricas ou empilhamento sticky. GSAP e ScrollTrigger são inicializados apenas dentro de `gsap.matchMedia()` para `(prefers-reduced-motion: no-preference)`, e o conteúdo permanece visível por padrão. Em `reduce`, scrub e transforms são removidos e todo conteúdo fica no estado final.
 
 ### Carousel Controls
 
@@ -203,7 +203,7 @@ Controles são quadrados de 54px, transparentes e contornados. Hover usa azul de
 - Use azul em papéis claros: marinho para estrutura, azul vivo para ação e azul-claro para orientação.
 - Preserve títulos largos em duas ou três linhas.
 - Faça grids gapless densos e matematicamente preenchidos.
-- Use fotografia monocromática com recuperação de cor na interação.
+- Use fotografia colorida somente quando a imagem representar literalmente o conteúdo; na falta de fotografia própria, prefira estrutura tipográfica.
 - Respeite o gate obrigatório de `prefers-reduced-motion`.
 
 ### Don't

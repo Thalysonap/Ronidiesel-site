@@ -27,12 +27,12 @@ FIRST VIEWPORT: Barra superior como viga técnica; composição editorial dividi
 
 FORM: Baia de Prontidão, sétima direção da lista ordenada; seed:150044d115d80ac8.
 
-FINISH: Estado atual documentado em DESIGN.md e .impeccable/design.json; index.html, css/index.css e js/index.js incluem os contatos confirmados, Maps, vídeo com fallback de movimento reduzido e slot explícito para a futura logomarca.
+FINISH: Estado atual documentado em DESIGN.md; index.html, css/index.css e js/index.js incluem os contatos confirmados, Maps, logomarca oficial e atalho acessível para o WhatsApp.
 
 ## Memorable moment
 
-Uma linha de inspeção percorre o veículo no primeiro viewport; depois, serviços se empilham como etapas físicas da baia. Na localização, o mecânico em vídeo ganha uma varredura azul própria do sistema e só reproduz quando visível e quando movimento não foi reduzido.
+Uma linha de inspeção percorre o veículo no primeiro viewport; depois, uma trilha contínua transforma o primeiro atendimento em três passos claros, sem cartões empilhados ou imagens genéricas. A localização permanece direta, sem mídia animada competindo com endereço, contato e mapa.
 
 ## Open decisions
 
-A logomarca oficial ainda está pendente; o monograma `RD` funciona como reserva explícita e deve ser substituído pela imagem indicada nos comentários do código quando o arquivo final for entregue.
+A logomarca fornecida foi aplicada no cabeçalho e no rodapé. Confirmar apenas se haverá no futuro uma versão oficial com fundo transparente para substituir o PNG atual sem alterar a composição.

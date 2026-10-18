@@ -13,13 +13,13 @@ Página institucional web em modo Persuade. Explica a RONIDIESEL pelo modo de tr
 
 ## Product truth
 
-O endereço oficial é Avenida Luiz Parma, 99, Ubá, MG, 36502-110; o telefone e WhatsApp são (32) 3532-2532. A logomarca oficial ainda está pendente, e o monograma `RD` preserva um slot explícito de 44px para sua futura aplicação. Confiança, compromisso e preço justo são os diferenciais confirmados; não usar histórico, números ou certificações não aprovados.
+O endereço oficial é Avenida Luiz Parma, 99, Ubá, MG, 36502-110; o telefone e WhatsApp são (32) 3532-2532. A logomarca fornecida está aplicada no cabeçalho e no rodapé. Confiança, compromisso e preço justo são os diferenciais confirmados; não usar histórico, números ou certificações não aprovados.
 
 ## Direction contract
 
 THESIS: A empresa é apresentada pelo modo como trabalha, não por números ou alegações sem prova; recusa o institucional genérico de foto, missão e cartões de valores.
 
-OWN-WORLD: A mesma Baia de Prontidão Azul, com marinho estrutural, superfícies branco/mineral, divisores técnicos e fotografia que recupera cor na interação.
+OWN-WORLD: A mesma Baia de Prontidão Azul, com marinho estrutural, superfícies branco/mineral, divisores técnicos e fotografia colorida com revelação de enquadramento.
 
 STORY: O visitante entende quem é a RONIDIESEL, lê os princípios, percorre a forma de atendimento e encontra uma ação clara no WhatsApp; o rodapé preserva o endereço confirmado e conduz ao mapa da página inicial.
 
@@ -31,4 +31,4 @@ FINISH: Estado atual documentado em DESIGN.md e .impeccable/design.json para emp
 
 ## Open decisions
 
-A logomarca oficial ainda está pendente; substituir o monograma `RD` pela imagem indicada nos comentários do código quando o arquivo final for entregue, preservando a caixa prevista.
+Confirmar apenas se haverá no futuro uma versão oficial da logomarca com fundo transparente.

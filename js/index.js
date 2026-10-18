@@ -4,11 +4,12 @@
   const menuLabel = menuButton?.querySelector('.sr-only');
 
   if (menuButton && navigation) {
-    const closeMenu = () => {
+    const closeMenu = (restoreFocus = false) => {
       menuButton.setAttribute('aria-expanded', 'false');
       navigation.classList.remove('is-open');
       document.body.classList.remove('menu-open');
       if (menuLabel) menuLabel.textContent = 'Abrir menu';
+      if (restoreFocus) menuButton.focus();
     };
 
     menuButton.addEventListener('click', () => {
@@ -19,9 +20,9 @@
       if (menuLabel) menuLabel.textContent = nextOpen ? 'Fechar menu' : 'Abrir menu';
     });
 
-    navigation.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+    navigation.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => closeMenu(false)));
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') closeMenu();
+      if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') closeMenu(true);
     });
   }
 
@@ -48,52 +49,16 @@
   if (!window.gsap || !window.ScrollTrigger) return;
 
   const motion = gsap.matchMedia();
-  const locationVideo = document.querySelector('[data-location-video]');
-
-  motion.add('(prefers-reduced-motion: no-preference)', () => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    if (!locationVideo) return undefined;
-
-    let isVisible = false;
-    const syncPlayback = () => {
-      if (isVisible && document.visibilityState === 'visible') {
-        locationVideo.play().catch(() => {});
-      } else {
-        locationVideo.pause();
-      }
-    };
-
-    const observer = new IntersectionObserver(([entry]) => {
-      isVisible = entry.isIntersecting;
-      syncPlayback();
-    }, { threshold: 0.35 });
-
-    observer.observe(locationVideo);
-    document.addEventListener('visibilitychange', syncPlayback);
-
-    return () => {
-      observer.disconnect();
-      document.removeEventListener('visibilitychange', syncPlayback);
-      locationVideo.pause();
-    };
-  });
-
-  motion.add('(prefers-reduced-motion: reduce)', () => {
-    if (!locationVideo) return undefined;
-    locationVideo.pause();
-    locationVideo.currentTime = 0;
-    return undefined;
-  });
 
   motion.add('(prefers-reduced-motion: no-preference) and (min-width: 761px)', () => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.utils.toArray('.motion-image').forEach((figure) => {
       gsap.fromTo(figure,
-        { scale: 0.88, opacity: 0.62 },
+        { scale: 1.035, opacity: 0.82, clipPath: 'inset(10% 0 0 0)' },
         {
           scale: 1,
           opacity: 1,
+          clipPath: 'inset(0% 0 0 0)',
           ease: 'none',
           scrollTrigger: {
             trigger: figure,
@@ -104,35 +69,6 @@
         }
       );
 
-      gsap.to(figure, {
-        opacity: 0.28,
-        filter: 'brightness(0.56)',
-        ease: 'none',
-        scrollTrigger: {
-          trigger: figure,
-          start: 'bottom 48%',
-          end: 'bottom top',
-          scrub: true
-        }
-      });
-    });
-
-    const panels = gsap.utils.toArray('.service-panel');
-    panels.forEach((panel, index) => {
-      if (index === panels.length - 1) return;
-      gsap.to(panel, {
-        scale: 0.92 + index * 0.025,
-        opacity: 0.48,
-        filter: 'brightness(0.66)',
-        ease: 'none',
-        scrollTrigger: {
-          trigger: panel,
-          start: `top ${120 + index * 22}px`,
-          endTrigger: panels[panels.length - 1],
-          end: 'top 22%',
-          scrub: true
-        }
-      });
     });
   });
 })();

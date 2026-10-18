@@ -54,6 +54,15 @@
         ],
         "createdAt": "2026-10-18T13:19:29.210Z",
         "reason": "DESIGN.md: compact leading is intentional for large display headings; body text remains at 1.6"
+      },
+      {
+        "rule": "tight-leading",
+        "value": "*",
+        "files": [
+          "servicos.html"
+        ],
+        "createdAt": "2026-10-18T20:03:35.149Z",
+        "reason": "DESIGN.md: compact leading is intentional for large display headings; body copy remains at 1.6"
       }
     ]
   }

@@ -6,11 +6,12 @@
 
   if (menuButton && navigation) {
     const menuLabel = menuButton.querySelector('.sr-only');
-    const closeMenu = () => {
+    const closeMenu = (restoreFocus = false) => {
       menuButton.setAttribute('aria-expanded', 'false');
       if (menuLabel) menuLabel.textContent = 'Abrir menu';
       navigation.classList.remove('is-open');
       document.body.classList.remove('menu-open');
+      if (restoreFocus) menuButton.focus();
     };
 
     menuButton.addEventListener('click', () => {
@@ -21,9 +22,9 @@
       document.body.classList.toggle('menu-open', open);
     });
 
-    navigation.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+    navigation.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => closeMenu(false)));
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') closeMenu();
+      if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') closeMenu(true);
     });
   }
 
@@ -93,27 +94,6 @@
           }
         }
       );
-    });
-  });
-
-  motion.add('(prefers-reduced-motion: no-preference) and (min-width: 761px)', () => {
-    gsap.registerPlugin(ScrollTrigger);
-    const cards = gsap.utils.toArray('.journey-card');
-    cards.forEach((card, index) => {
-      if (index === cards.length - 1) return;
-      gsap.to(card, {
-        scale: 0.92 + index * 0.03,
-        opacity: 0.5,
-        filter: 'brightness(0.64)',
-        ease: 'none',
-        scrollTrigger: {
-          trigger: card,
-          start: `top ${120 + index * 22}px`,
-          endTrigger: cards[cards.length - 1],
-          end: 'top 24%',
-          scrub: true
-        }
-      });
     });
   });
 

@@ -9,19 +9,19 @@ related_targets: ["css/servicos.css", "js/servicos.js"]
 
 ## Scope
 
-Página de serviços web em modo Persuade. Apresenta quatro frentes de manutenção, explica a sequência de atendimento e conduz a uma conversa no WhatsApp ou à localização da oficina.
+Página de serviços web em modo Persuade. Organiza o início do atendimento por contexto de veículo, explica quais informações levar à conversa e conduz ao WhatsApp ou à localização da oficina.
 
 ## Product truth
 
-O endereço oficial é Avenida Luiz Parma, 99, Ubá, MG, 36502-110; o telefone e WhatsApp são (32) 3532-2532. A logomarca oficial ainda está pendente, e o monograma `RD` preserva um slot explícito de 44px para sua futura aplicação. Não criar garantias, prazos, preços, certificações ou provas comerciais não confirmadas.
+O endereço oficial é Avenida Luiz Parma, 99, Ubá, MG, 36502-110; o telefone e WhatsApp são (32) 3532-2532. A logomarca fornecida está aplicada no cabeçalho e no rodapé. Não criar garantias, prazos, preços, certificações ou provas comerciais não confirmadas.
 
 ## Direction contract
 
-THESIS: A página transforma o catálogo em uma sequência de diagnóstico e decisão; recusa a grade genérica de cartões iguais com ícones.
+THESIS: A página substitui um catálogo ainda não confirmado por uma orientação honesta para o primeiro contato; recusa promessas técnicas sem prova e a grade genérica de cartões com ícones.
 
-OWN-WORLD: Marinho estrutural, azul de ação, azul-claro e branco mineral; painéis ortogonais, divisores compartilhados, mídia monocromática e controles quadrados.
+OWN-WORLD: Marinho estrutural, azul de ação, azul-claro e branco mineral; painéis ortogonais, divisores compartilhados, mídia colorida com contraste controlado e controles quadrados.
 
-STORY: O visitante reconhece os quatro serviços, entende o processo de avaliação, orçamento e reparo, e segue para solicitar atendimento pelo WhatsApp; o rodapé preserva o endereço confirmado e conduz ao mapa da página inicial.
+STORY: O visitante escolhe entre veículo leve, pesado, frota/setor público ou dúvida inicial, entende quais informações compartilhar e segue para conversar pelo WhatsApp; o rodapé preserva telefone e endereço confirmados e conduz ao mapa da página inicial.
 
 FIRST VIEWPORT: Viga de navegação; título amplo em duas linhas à esquerda; fotografia operacional assimétrica à direita; ação primária visível sem selos ou estatísticas.
 
@@ -31,4 +31,4 @@ FINISH: Estado atual documentado em DESIGN.md e .impeccable/design.json para ser
 
 ## Open decisions
 
-A logomarca oficial ainda está pendente; substituir o monograma `RD` pela imagem indicada nos comentários do código quando o arquivo final for entregue, preservando a caixa prevista.
+Confirmar apenas se haverá no futuro uma versão oficial da logomarca com fundo transparente.
