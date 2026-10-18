@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#061A33">
+  <meta name="description" content="Conheça os serviços de manutenção para caminhões e veículos pesados da RONIDIESEL.">
+  <title>Serviços | RONIDIESEL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/servicos.css">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="js/servicos.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="index.html" aria-label="RONIDIESEL, página inicial">
+      <!-- LOGO: substitua o monograma abaixo por <img class="brand-logo" src="assets/logo-ronidiesel.png" alt="RONIDIESEL"> -->
+      <span class="brand-logo-slot" aria-hidden="true">RD</span>
+      <span class="brand-wordmark"><span class="brand-word">RONI</span><span class="brand-accent">DIESEL</span></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+      <span class="sr-only">Abrir menu</span><i></i><i></i>
+    </button>
+    <nav class="site-nav" id="menu-principal" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="servicos.html" aria-current="page">Serviços</a>
+      <a href="empresa.html">Empresa</a>
+      <a href="index.html#localizacao">Localização</a>
+    </nav>
+    <a class="nav-cta" href="https://wa.me/553235322532?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20atendimento%20na%20RONIDIESEL." target="_blank" rel="noopener">Falar no WhatsApp</a>
+  </header>
+
+  <main id="conteudo" class="page-shell">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title">Serviços para manter sua frota <span>em movimento.</span></h1>
+        <p>Manutenção especializada, diagnóstico preciso e reparos com foco em segurança e disponibilidade.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#servicos">Conhecer os serviços</a>
+          <a class="button button-ghost" href="#processo">Ver como trabalhamos</a>
+        </div>
+      </div>
+      <figure class="hero-media interactive-media">
+        <img src="assets/index/workshop.jpg" alt="Profissional realiza manutenção em uma oficina" fetchpriority="high">
+        <figcaption>Diagnóstico, cuidado e precisão</figcaption>
+      </figure>
+      <div class="hero-rail" aria-hidden="true"></div>
+    </section>
+
+    <section class="services section-space" id="servicos" aria-labelledby="services-title">
+      <div class="section-heading">
+        <h2 id="services-title">O que fazemos <span class="inline-photo" aria-hidden="true"><img src="assets/index/diagnostic.jpg" alt=""></span> para sua operação seguir.</h2>
+        <p>Serviços completos para apoiar o desempenho, a segurança e a disponibilidade da sua frota.</p>
+      </div>
+
+      <div class="services-grid">
+        <figure class="services-media interactive-media">
+          <img src="assets/index/diagnostic.jpg" alt="Profissional realiza uma inspeção técnica" loading="lazy">
+          <figcaption>A atenção começa antes do reparo.</figcaption>
+        </figure>
+
+        <a class="service-cell" id="motor" href="https://wa.me/553235322532?text=Ol%C3%A1%2C%20quero%20atendimento%20para%20motor%20diesel." target="_blank" rel="noopener">
+          <h3>Motor diesel</h3>
+          <p>Diagnóstico, manutenção e reparo de motores e sistemas de injeção. Avaliamos cada componente com atenção para recuperar o desempenho e prolongar a vida útil do conjunto.</p>
+          <span>Solicitar este serviço</span>
+        </a>
+        <a class="service-cell service-cell-light" id="freios" href="https://wa.me/553235322532?text=Ol%C3%A1%2C%20quero%20atendimento%20para%20freios%20e%20suspens%C3%A3o." target="_blank" rel="noopener">
+          <h3>Freios e suspensão</h3>
+          <p>Inspeção e reparo para mais estabilidade, controle e segurança. Cuidamos dos sistemas que fazem diferença no comportamento do veículo e na confiança ao dirigir.</p>
+          <span>Solicitar este serviço</span>
+        </a>
+        <a class="service-cell service-cell-light" id="eletrico" href="https://wa.me/553235322532?text=Ol%C3%A1%2C%20quero%20atendimento%20para%20o%20sistema%20el%C3%A9trico." target="_blank" rel="noopener">
+          <h3>Sistema elétrico</h3>
+          <p>Avaliação de baterias, alternadores, iluminação e falhas elétricas. Localizamos a origem do problema e orientamos os reparos necessários com clareza.</p>
+          <span>Solicitar este serviço</span>
+        </a>
+        <a class="service-cell" id="oleo" href="https://wa.me/553235322532?text=Ol%C3%A1%2C%20quero%20atendimento%20para%20%C3%B3leo%20e%20filtros." target="_blank" rel="noopener">
+          <h3>Óleo e filtros</h3>
+          <p>Troca e revisão preventiva conforme a necessidade do veículo. Seguimos as especificações recomendadas para preservar os componentes e apoiar a operação da frota.</p>
+          <span>Solicitar este serviço</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="process section-space" id="processo" aria-labelledby="process-title">
+      <div class="process-intro">
+        <div class="process-pin">
+          <h2 id="process-title">Do diagnóstico à entrega.</h2>
+          <p class="scrub-copy" data-scrub-text>Cada etapa é conduzida com cuidado, comunicação direta e atenção ao que sua operação precisa.</p>
+        </div>
+      </div>
+      <ol class="process-stack">
+        <li class="process-card">
+          <span class="process-number" aria-hidden="true">01</span>
+          <div>
+            <h3>Avaliação técnica</h3>
+            <p>Análise completa do veículo e identificação precisa das necessidades de manutenção.</p>
+          </div>
+          <figure class="interactive-media"><img src="assets/index/team.jpg" alt="Equipe realiza uma avaliação técnica" loading="lazy"></figure>
+        </li>
+        <li class="process-card">
+          <span class="process-number" aria-hidden="true">02</span>
+          <div>
+            <h3>Orçamento transparente</h3>
+            <p>Você recebe um orçamento detalhado, com serviços e peças necessárias, sem surpresas.</p>
+          </div>
+          <figure class="interactive-media"><img src="assets/index/diagnostic.jpg" alt="Profissional analisa as necessidades de manutenção" loading="lazy"></figure>
+        </li>
+        <li class="process-card">
+          <span class="process-number" aria-hidden="true">03</span>
+          <div>
+            <h3>Reparo e conferência</h3>
+            <p>Execução dos serviços por equipe especializada e testes finais para garantir a qualidade.</p>
+          </div>
+          <figure class="interactive-media"><img src="assets/index/road-truck.jpg" alt="Caminhão preparado para retornar à operação" loading="lazy"></figure>
+        </li>
+      </ol>
+    </section>
+
+    <section class="closing-cta" aria-labelledby="closing-title">
+      <div>
+        <h2 id="closing-title">Seu caminhão precisa de atenção?</h2>
+        <p>Fale com nossa equipe e receba um atendimento especializado.</p>
+      </div>
+      <a class="button button-dark" href="https://wa.me/553235322532?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20atendimento%20na%20RONIDIESEL." target="_blank" rel="noopener">Fale com nossa equipe</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <a class="brand brand-footer" href="index.html"><span class="brand-logo-slot" aria-hidden="true">RD</span><span class="brand-wordmark"><span class="brand-word">RONI</span><span class="brand-accent">DIESEL</span></span></a>
+      <p>Manutenção para caminhões e veículos leves e pesados.</p>
+    </div>
+    <nav aria-label="Navegação do rodapé">
+      <a href="index.html">Início</a>
+      <a href="servicos.html" aria-current="page">Serviços</a>
+      <a href="empresa.html">Empresa</a>
+      <a href="index.html#localizacao">Localização</a>
+    </nav>
+    <p class="footer-note">Avenida Luiz Parma, 99<br>Ubá — MG</p>
+  </footer>
+  <a class="whatsapp-float" href="https://wa.me/553235322532?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20atendimento%20na%20RONIDIESEL." target="_blank" rel="noopener" aria-label="Falar com a RONIDIESEL pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.9L0 24l6.5-1.7a12 12 0 0 0 5.6 1.4c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.4-8.4Zm-8.4 18.2c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.5 4.7Zm5.4-7.3c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.6l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.9 5.2 2.2.9 3.1 1 4.2.8.7-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3Z"/></svg></a>
+</body>
+</html>

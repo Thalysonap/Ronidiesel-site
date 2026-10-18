@@ -1,0 +1,38 @@
+---
+version: 1
+slug: "index-html"
+primary_target: "index.html"
+related_targets: ["css/index.css", "js/index.js"]
+---
+
+# Surface: index.html
+
+## Scope
+
+Página inicial web em modo Persuade. Fala com prefeituras, autônomos e gestores de frota; apresenta manutenção de veículos leves e pesados e conduz ao WhatsApp, aos serviços, à empresa e à localização da oficina.
+
+## Product truth
+
+Confiança, compromisso e preço justo são os diferenciais confirmados. O endereço oficial é Avenida Luiz Parma, 99, Ubá, MG, 36502-110; o telefone e WhatsApp são (32) 3532-2532. Não usar anos de experiência, depoimentos, clientes, certificações ou outras provas não oficiais. O conteúdo permanece em português do Brasil.
+
+## Direction contract
+
+THESIS: A página funciona como uma baia de prontidão que devolve veículos ao caminho; recusa o hero genérico com foto de caminhão seguido por uma fileira de cartões iguais.
+
+OWN-WORLD: Marinho estrutural, azul de ação, azul-claro e superfícies brancas/minerais; trilhos, placas, compartimentos e linhas de inspeção formam navegação, conteúdo e estados.
+
+STORY: O visitante reconhece imediatamente a oficina para leves e pesados, entende o cuidado em etapas, percebe transparência e consegue abrir o WhatsApp, conhecer os serviços ou localizar a oficina no mapa.
+
+FIRST VIEWPORT: Barra superior como viga técnica; composição editorial dividida com título de duas linhas à esquerda e baia visual em movimento à direita; ações primária e secundária abaixo do título.
+
+FORM: Baia de Prontidão, sétima direção da lista ordenada; seed:150044d115d80ac8.
+
+FINISH: Estado atual documentado em DESIGN.md e .impeccable/design.json; index.html, css/index.css e js/index.js incluem os contatos confirmados, Maps, vídeo com fallback de movimento reduzido e slot explícito para a futura logomarca.
+
+## Memorable moment
+
+Uma linha de inspeção percorre o veículo no primeiro viewport; depois, serviços se empilham como etapas físicas da baia. Na localização, o mecânico em vídeo ganha uma varredura azul própria do sistema e só reproduz quando visível e quando movimento não foi reduzido.
+
+## Open decisions
+
+A logomarca oficial ainda está pendente; o monograma `RD` funciona como reserva explícita e deve ser substituído pela imagem indicada nos comentários do código quando o arquivo final for entregue.

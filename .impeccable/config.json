@@ -1,0 +1,60 @@
+{
+  "buildPath": "code",
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "geist",
+        "createdAt": "2026-10-17T22:33:30.692Z",
+        "reason": "\"User confirmed: the redesign brief explicitly requires Geist typography\""
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "servicos.html"
+        ],
+        "createdAt": "2026-10-18T12:55:31.697Z",
+        "reason": "\"Agent verified: services-grid is an intentional gapless bento; each child cell owns 28-46px internal padding\""
+      },
+      {
+        "rule": "tight-leading",
+        "value": "*",
+        "files": [
+          "empresa.html"
+        ],
+        "createdAt": "2026-10-18T12:55:32.960Z",
+        "reason": "\"DESIGN.md: 0.98 line-height is intentional for large headlines; body copy is explicitly 1.6\""
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T13:19:25.429Z",
+        "reason": "Agent verified: every clear-blue surface sets navy text; white text is used only on navy or action-blue, whose minimum measured contrast is 4.82:1"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T13:19:27.317Z",
+        "reason": "Agent verified: flagged wrappers are intentional gapless grids; their text-bearing children own 18-48px internal padding"
+      },
+      {
+        "rule": "tight-leading",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T13:19:29.210Z",
+        "reason": "DESIGN.md: compact leading is intentional for large display headings; body text remains at 1.6"
+      }
+    ]
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-18T10:14:08-03:00",
+  "title": "Design System: RONIDIESEL — Baia de Prontidão Azul",
+  "extensions": {
+    "colorMeta": {
+      "navy-950": { "role": "primary", "displayName": "Marinho Estrutural", "canonical": "#061A33", "tonalRamp": ["#02070D", "#041120", "#061A33", "#0A2D55", "#22517C", "#567CA5", "#9DB5CF", "#E8F0F8"] },
+      "navy-900": { "role": "primary", "displayName": "Marinho de Painel", "canonical": "#0A2342", "tonalRamp": ["#030A12", "#07172B", "#0A2342", "#123A68", "#2D5D8D", "#6285AD", "#A5BED5", "#EAF1F8"] },
+      "navy-800": { "role": "secondary", "displayName": "Azul Profundo", "canonical": "#103B68", "tonalRamp": ["#05101B", "#0A2541", "#103B68", "#18558F", "#3675AB", "#6B98C1", "#AEC5DA", "#EBF2F8"] },
+      "action-blue": { "role": "primary", "displayName": "Azul de Ação", "canonical": "#0A66FF", "tonalRamp": ["#001633", "#002F70", "#0048AD", "#0A66FF", "#4A8CFF", "#83B1FF", "#BCD5FF", "#EDF4FF"] },
+      "action-blue-hover": { "role": "primary", "displayName": "Azul de Ação Profundo", "canonical": "#0757D5", "tonalRamp": ["#001329", "#00295E", "#03408F", "#0757D5", "#397BDF", "#76A5EA", "#B5CDF4", "#EBF2FC"] },
+      "clear-blue": { "role": "secondary", "displayName": "Azul Claro", "canonical": "#DCEBFF", "tonalRamp": ["#132236", "#27405F", "#456386", "#6E8CAD", "#9BB6D2", "#C0D5ED", "#DCEBFF", "#F2F7FF"] },
+      "mineral": { "role": "neutral", "displayName": "Mineral", "canonical": "#F5F8FC", "tonalRamp": ["#202326", "#41464B", "#656B72", "#8C939B", "#B3BAC1", "#D3D8DE", "#E9EDF2", "#F5F8FC"] },
+      "white": { "role": "neutral", "displayName": "Branco", "canonical": "#FFFFFF", "tonalRamp": ["#262626", "#4D4D4D", "#737373", "#999999", "#BFBFBF", "#D9D9D9", "#F2F2F2", "#FFFFFF"] },
+      "structural-line": { "role": "neutral", "displayName": "Linha Estrutural", "canonical": "#7894B8", "tonalRamp": ["#101821", "#253448", "#3D506A", "#5A708F", "#7894B8", "#9DB1CB", "#C5D1E0", "#EEF2F7"] },
+      "ink-blue": { "role": "neutral", "displayName": "Azul-Tinta", "canonical": "#102A4C", "tonalRamp": ["#050C15", "#0A1B31", "#102A4C", "#1B456F", "#3D668F", "#738CA9", "#B2C2D3", "#EDF2F7"] },
+      "muted-blue": { "role": "neutral", "displayName": "Azul Suave", "canonical": "#B8CCE8", "tonalRamp": ["#17202C", "#304157", "#4C6380", "#6D86A8", "#91AACB", "#B8CCE8", "#D8E3F2", "#F1F5FB"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "H1 e chamadas de fechamento amplas, em duas ou três linhas." },
+      "headline": { "displayName": "Headline", "purpose": "Títulos principais de seção." },
+      "title": { "displayName": "Title", "purpose": "Títulos de painéis e células." },
+      "body": { "displayName": "Body", "purpose": "Texto corrido com 65 a 75 caracteres por linha em leitura." },
+      "label": { "displayName": "Label", "purpose": "Botões, controles, status e microcopy funcional." }
+    },
+    "shadows": [
+      { "name": "sticky-panel", "value": "0 28px 52px rgba(0, 0, 0, .28)", "purpose": "Exclusiva de painéis sticky durante empilhamento funcional." }
+    ],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(.16, 1, .3, 1)", "purpose": "Elevação curta de controles e zoom de mídia." },
+      { "name": "scrub-copy", "value": "GSAP ScrollTrigger scrub: true", "purpose": "Revela palavras conforme a leitura avança." },
+      { "name": "reduced-motion-gate", "value": "gsap.matchMedia('(prefers-reduced-motion: no-preference)')", "purpose": "Impede pinning, scrub e transforms quando movimento reduzido está ativo." },
+      { "name": "location-video-playback", "value": "IntersectionObserver threshold: 0.35 + document.visibilityState", "purpose": "Reproduz o vídeo sem áudio somente quando visível; pausa fora da tela ou em aba oculta." },
+      { "name": "location-video-reduce", "value": "pause(); currentTime = 0", "purpose": "Mantém o poster estático e oculta a varredura azul quando o visitante pede movimento reduzido." }
+    ],
+    "breakpoints": [
+      { "name": "navigation-collapse", "value": "1050px" },
+      { "name": "mobile-stack", "value": "760px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button", "kind": "button", "refersTo": "button-primary",
+      "description": "Ação principal de alta prioridade em azul de ação.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">SOLICITAR ATENDIMENTO</a>",
+      "css": ".ds-btn-primary { display:inline-flex; min-height:52px; align-items:center; justify-content:center; padding:14px 22px; border-radius:0; background:var(--action, #0A66FF); color:var(--white, #FFFFFF); font-family:Geist,Arial,sans-serif; font-size:.82rem; font-weight:800; text-decoration:none; transition:transform .35s cubic-bezier(.16,1,.3,1),background .25s ease; } .ds-btn-primary:hover { background:var(--action-hover, #0757D5); transform:translateY(-3px); } .ds-btn-primary:focus-visible { outline:3px solid var(--action, #0A66FF); outline-offset:4px; }"
+    },
+    {
+      "name": "Ghost Button", "kind": "button", "refersTo": "button-ghost",
+      "description": "Ação secundária contornada para superfícies escuras.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">CONHECER SERVIÇOS</a>",
+      "css": ".ds-btn-ghost { display:inline-flex; min-height:52px; align-items:center; justify-content:center; padding:14px 22px; border:1px solid var(--line, #7894B8); border-radius:0; background:transparent; color:var(--white, #FFFFFF); font-family:Geist,Arial,sans-serif; font-size:.82rem; font-weight:800; text-decoration:none; transition:transform .35s cubic-bezier(.16,1,.3,1),background .25s ease,color .25s ease; } .ds-btn-ghost:hover { background:var(--white, #FFFFFF); color:var(--navy-950, #061A33); transform:translateY(-3px); } .ds-btn-ghost:focus-visible { outline:3px solid var(--white, #FFFFFF); outline-offset:4px; }"
+    },
+    {
+      "name": "Navigation Beam", "kind": "nav",
+      "description": "Navegação marinho translúcida com sinal linear de hover e item ativo.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Principal\"><a aria-current=\"page\" href=\"#\">Serviços</a><a href=\"#\">Empresa</a><a href=\"#\">Contato</a></nav>",
+      "css": ".ds-nav { display:flex; align-items:center; gap:32px; min-height:84px; padding:0 32px; border-bottom:1px solid rgba(220,235,255,.28); background:rgba(6,26,51,.86); backdrop-filter:blur(14px); font-family:Geist,Arial,sans-serif; } .ds-nav a { position:relative; color:var(--clear-blue, #DCEBFF); font-size:.82rem; font-weight:600; text-decoration:none; } .ds-nav a::after { position:absolute; right:100%; bottom:-9px; left:0; height:2px; background:var(--clear-blue, #DCEBFF); content:\"\"; transition:right .35s cubic-bezier(.16,1,.3,1); } .ds-nav a:hover::after,.ds-nav a[aria-current=\"page\"]::after { right:0; } .ds-nav a:focus-visible { outline:3px solid var(--action, #0A66FF); outline-offset:4px; }"
+    },
+    {
+      "name": "Service Cell", "kind": "card",
+      "description": "Célula ortogonal de um grid gapless; muda de campo inteiro no hover.",
+      "html": "<a class=\"ds-service-cell\" href=\"#\"><h3>Manutenção preventiva</h3><p>Inspeção clara para apoiar continuidade operacional.</p><span>VER SERVIÇO</span></a>",
+      "css": ".ds-service-cell { display:flex; min-height:330px; flex-direction:column; justify-content:space-between; padding:40px; border:1px solid var(--line, #7894B8); border-radius:0; background:var(--navy-900, #0A2342); color:var(--white, #FFFFFF); font-family:Geist,Arial,sans-serif; text-decoration:none; transition:background .35s ease,color .35s ease; } .ds-service-cell h3 { max-width:11ch; margin:0 0 28px; font-size:2.4rem; line-height:1; letter-spacing:-.035em; } .ds-service-cell p { max-width:42ch; margin:0 0 32px; opacity:.82; } .ds-service-cell span { margin-top:auto; font-size:.82rem; font-weight:800; text-decoration:underline; text-underline-offset:7px; } .ds-service-cell:hover,.ds-service-cell:focus-visible { background:var(--action, #0A66FF); color:var(--white, #FFFFFF); } .ds-service-cell:focus-visible { outline:3px solid var(--white, #FFFFFF); outline-offset:-6px; }"
+    },
+    {
+      "name": "Sticky Process Panel", "kind": "card",
+      "description": "Etapa numerada que comunica profundidade somente durante o empilhamento sticky.",
+      "html": "<article class=\"ds-process-panel\"><span>01</span><div><h3>Avaliação</h3><p>O contexto operacional orienta o diagnóstico.</p></div></article>",
+      "css": ".ds-process-panel { display:grid; grid-template-columns:90px minmax(0,1fr); min-height:360px; border:1px solid var(--line, #7894B8); border-radius:0; background:var(--navy-900, #0A2342); color:var(--white, #FFFFFF); box-shadow:0 28px 52px rgba(0,0,0,.28); font-family:Geist,Arial,sans-serif; } .ds-process-panel>span { padding:40px 24px; border-right:1px solid var(--line, #7894B8); color:var(--clear-blue, #DCEBFF); font-weight:800; font-variant-numeric:tabular-nums; } .ds-process-panel>div { display:flex; flex-direction:column; justify-content:flex-end; padding:48px; } .ds-process-panel h3 { max-width:13ch; margin:0 0 24px; font-size:3rem; line-height:.96; letter-spacing:-.04em; } .ds-process-panel p { max-width:65ch; margin:0; color:var(--muted-blue, #B8CCE8); } .ds-process-panel:focus-within { outline:3px solid var(--action, #0A66FF); outline-offset:4px; }"
+    },
+    {
+      "name": "Carousel Control", "kind": "button",
+      "description": "Controle quadrado de 54px para percorrer princípios sem introduzir um segundo idioma geométrico.",
+      "html": "<button class=\"ds-carousel-control\" type=\"button\" aria-label=\"Próximo\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M8 4l8 8-8 8\"/></svg></button>",
+      "css": ".ds-carousel-control { display:grid; width:54px; height:54px; place-items:center; border:1px solid var(--line, #7894B8); border-radius:0; background:transparent; color:var(--white, #FFFFFF); cursor:pointer; transition:background .25s ease,color .25s ease,transform .25s cubic-bezier(.16,1,.3,1); } .ds-carousel-control svg { width:22px; fill:none; stroke:currentColor; stroke-linecap:square; stroke-width:1.8; } .ds-carousel-control:hover { background:var(--action, #0A66FF); color:var(--white, #FFFFFF); transform:translateY(-2px); } .ds-carousel-control:focus-visible { outline:3px solid var(--action, #0A66FF); outline-offset:4px; }"
+    },
+    {
+      "name": "Inspection Media", "kind": "custom",
+      "description": "Fotografia operacional monocromática que recupera cor na interação.",
+      "html": "<figure class=\"ds-inspection-media\" tabindex=\"0\"><div aria-label=\"Mídia operacional\"></div></figure>",
+      "css": ".ds-inspection-media { width:100%; max-width:520px; min-height:300px; margin:0; overflow:hidden; border-radius:0; background:linear-gradient(135deg,var(--navy-800, #103B68),var(--clear-blue, #DCEBFF)); } .ds-inspection-media>div { width:100%; min-height:300px; background:linear-gradient(125deg,#D8DDE3 0%,#6D7782 48%,#1C252F 100%); filter:grayscale(1) contrast(1.15); transition:transform .8s cubic-bezier(.16,1,.3,1),filter .65s ease; } .ds-inspection-media:hover>div,.ds-inspection-media:focus-visible>div { transform:scale(1.05); filter:grayscale(0) contrast(1.04); } .ds-inspection-media:focus-visible { outline:3px solid var(--action, #0A66FF); outline-offset:4px; }"
+    },
+    {
+      "name": "Brand Slot", "kind": "custom",
+      "description": "Reserva quadrada de 44px para a futura logomarca oficial, com monograma RD como fallback temporário.",
+      "html": "<a class=\"ds-brand\" href=\"#\" aria-label=\"RONIDIESEL, página inicial\"><span class=\"ds-brand-slot\" aria-hidden=\"true\">RD</span><span class=\"ds-brand-wordmark\"><span>RONI</span><span>DIESEL</span></span></a>",
+      "css": ".ds-brand { display:inline-flex; width:max-content; align-items:center; color:var(--white, #FFFFFF); font-family:Geist,Arial,sans-serif; font-size:1.22rem; font-weight:800; letter-spacing:-.035em; line-height:1; text-decoration:none; } .ds-brand-slot { display:grid; width:44px; height:44px; flex:0 0 44px; place-items:center; margin-inline-end:12px; border:1px solid var(--structural-line, #7894B8); border-radius:0; background:var(--clear-blue, #DCEBFF); color:var(--navy-950, #061A33); font-size:.68rem; letter-spacing:.08em; } .ds-brand-wordmark { display:inline-flex; } .ds-brand-wordmark span:last-child { color:var(--clear-blue, #DCEBFF); } .ds-brand:hover .ds-brand-slot { background:var(--white, #FFFFFF); } .ds-brand:focus-visible { outline:3px solid var(--action-blue, #0A66FF); outline-offset:4px; }"
+    },
+    {
+      "name": "Location Media", "kind": "custom",
+      "description": "Painel gapless 5/7 que combina vídeo operacional silencioso, mapa e rota para o endereço confirmado.",
+      "html": "<section class=\"ds-location\"><figure class=\"ds-location-film\"><video muted loop playsinline preload=\"metadata\" poster=\"assets/location/mechanic-poster.jpg\"><source src=\"assets/location/mechanic-loop.mp4\" type=\"video/mp4\"></video><span class=\"ds-location-scan\" aria-hidden=\"true\"></span><figcaption>Cuidado técnico para manter sua operação em movimento.</figcaption></figure><div class=\"ds-map\"><iframe title=\"Mapa da RONIDIESEL na Avenida Luiz Parma, 99, Ubá, Minas Gerais\" src=\"https://www.google.com/maps?q=Avenida%20Luiz%20Parma%2C%2099%2C%20Ub%C3%A1%2C%20MG%2C%2036502-110&amp;output=embed\" loading=\"lazy\"></iframe><div><p>Avenida Luiz Parma, 99, Ubá — MG</p><a href=\"https://www.google.com/maps/search/?api=1&amp;query=Avenida%20Luiz%20Parma%2C%2099%2C%20Ub%C3%A1%2C%20MG%2C%2036502-110\">ABRIR ROTA</a></div></div></section>",
+      "css": ".ds-location { display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); min-height:520px; border:1px solid var(--structural-line, #7894B8); font-family:Geist,Arial,sans-serif; } .ds-location-film { position:relative; min-width:0; margin:0; overflow:hidden; border-right:1px solid var(--structural-line, #7894B8); background:var(--clear-blue, #DCEBFF); } .ds-location-film::after { position:absolute; inset:0; background:linear-gradient(180deg,rgba(6,26,51,0) 54%,rgba(6,26,51,.9)); content:\"\"; pointer-events:none; } .ds-location-film video { display:block; width:100%; height:100%; object-fit:cover; filter:saturate(.74) contrast(1.06); } .ds-location-film figcaption { position:absolute; z-index:3; right:28px; bottom:28px; left:28px; color:var(--white, #FFFFFF); font-size:1.45rem; font-weight:700; line-height:1.05; } .ds-location-scan { position:absolute; z-index:2; right:0; left:0; top:28%; height:3px; background:var(--action-blue, #0A66FF); animation:ds-film-scan 4.8s cubic-bezier(.16,1,.3,1) infinite alternate; } @keyframes ds-film-scan { from { transform:translateY(-130px) scaleX(.72); } to { transform:translateY(280px) scaleX(1); } } .ds-map { display:grid; grid-template-rows:minmax(360px,1fr) auto; min-width:0; background:var(--navy-950, #061A33); color:var(--white, #FFFFFF); } .ds-map iframe { display:block; width:100%; height:100%; min-height:360px; border:0; filter:saturate(.68) contrast(1.08); } .ds-map>div { display:grid; grid-template-columns:1fr auto; align-items:center; gap:24px; padding:24px 28px; border-top:1px solid var(--structural-line, #7894B8); } .ds-map p { margin:0; font-weight:700; } .ds-map a { display:inline-flex; min-height:52px; align-items:center; padding:14px 22px; border-radius:0; background:var(--action-blue, #0A66FF); color:var(--white, #FFFFFF); font-size:.82rem; font-weight:800; text-decoration:none; } .ds-map a:hover { background:var(--action-blue-hover, #0757D5); } .ds-map a:focus-visible { outline:3px solid var(--white, #FFFFFF); outline-offset:4px; } @media (prefers-reduced-motion:reduce) { .ds-location-scan { display:none; } }"
+    },
+    {
+      "name": "WhatsApp Action", "kind": "button",
+      "description": "Atalho persistente para o WhatsApp confirmado, mantido no azul da marca em vez de introduzir verde.",
+      "html": "<a class=\"ds-whatsapp\" href=\"https://wa.me/553235322532\" aria-label=\"Falar com a RONIDIESEL pelo WhatsApp\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.9L0 24l6.5-1.7a12 12 0 0 0 5.6 1.4c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.4-8.4Zm-8.4 18.2c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.5 4.7Zm5.4-7.3c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.6l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.9 5.2 2.2.9 3.1 1 4.2.8.7-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3Z\"/></svg></a>",
+      "css": ".ds-whatsapp { display:grid; width:52px; height:52px; place-items:center; border:1px solid rgba(255,255,255,.5); border-radius:0; background:var(--action-blue, #0A66FF); color:var(--white, #FFFFFF); transition:transform .35s cubic-bezier(.16,1,.3,1),background .25s ease; } .ds-whatsapp svg { width:29px; height:29px; fill:currentColor; } .ds-whatsapp:hover { background:var(--action-blue-hover, #0757D5); transform:translateY(-4px); } .ds-whatsapp:focus-visible { outline:3px solid var(--white, #FFFFFF); outline-offset:4px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Baia de Prontidão Azul",
+    "overview": "A interface é uma baia técnica organizada para devolver movimento. Marinho estrutural, azul de ação, azul-claro e superfícies branco/mineral formam uma linguagem precisa; vigas, trilhos, divisores compartilhados e fotografia operacional tornam o cuidado visível sem recorrer a emblemas ou nostalgia de oficina.\n\nO azul não é acabamento: ele organiza campos inteiros, ações e estados. A confiança nasce de hierarquia, contraste e clareza. Títulos são largos e decisivos, as superfícies se encontram sem folgas decorativas e as fotografias permanecem monocromáticas até a interação.",
+    "keyCharacteristics": [
+      "Contraste alto entre marinho estrutural, azul de ação e superfícies brancas/minerais.",
+      "Tipografia Geist larga e compacta, com títulos limitados a duas ou três linhas.",
+      "Geometria ortogonal inspirada em baias, vigas, placas e linhas de inspeção.",
+      "Fotografia em escala de cinza que recupera cor apenas em hover ou foco.",
+      "Movimento funcional com scrub, empilhamento e progressão; estado estático completo para movimento reduzido."
+    ],
+    "rules": [
+      { "name": "The Blue Signal Is Sparse Rule", "body": "O azul de ação orienta ação, seleção e passagem. Campos azuis grandes são reservados a momentos de decisão, não a decoração recorrente.", "section": "colors" },
+      { "name": "The Blue Means Inspection Rule", "body": "Estados de inspeção usam o mesmo espectro azul em linha, ponto ou varredura; função e marca trabalham como uma única linguagem cromática.", "section": "colors" },
+      { "name": "The Wide Signal Rule", "body": "H1 e H2 usam containers amplos e `text-wrap: balance`; nenhum título forma uma coluna de quatro ou mais linhas no desktop. O H1 termina em duas ou três linhas.", "section": "typography" },
+      { "name": "The Bay Grid Rule", "body": "Elementos irmãos formam uma estrutura contínua. Bordas e superfícies compartilhadas precedem cartões soltos.", "section": "layout" },
+      { "name": "The Structural Depth Rule", "body": "Camada, borda e sobreposição vêm primeiro; sombra existe apenas no empilhamento funcional.", "section": "elevation" },
+      { "name": "The One Circle Rule", "body": "Círculos pertencem a indicadores pontuais; ações e estruturas permanecem quadradas.", "section": "shapes" }
+    ],
+    "dos": [
+      "Use azul em papéis claros: marinho para estrutura, azul vivo para ação e azul-claro para orientação.",
+      "Preserve títulos largos em duas ou três linhas.",
+      "Faça grids gapless densos e matematicamente preenchidos.",
+      "Use fotografia monocromática com recuperação de cor na interação.",
+      "Respeite o gate obrigatório de `prefers-reduced-motion`."
+    ],
+    "donts": [
+      "Não use acentos fora da escala azul/branco nem superfícies claras amareladas.",
+      "Não use meta-labels como “SEÇÃO 01”, “NOSSOS SERVIÇOS” ou “QUEM SOMOS”.",
+      "Não arredonde componentes estruturais nem transforme cada bloco em cartão isolado.",
+      "Não use sombras fora do empilhamento sticky.",
+      "Não use selos, stamps, emblemas ou provas comerciais não confirmadas."
+    ]
+  }
+}
